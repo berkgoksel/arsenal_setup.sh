@@ -48,5 +48,7 @@ alias bustit='gobuster -w /usr/share/dirbuster/wordlists/directory-list-2.3-smal
 alias opener='python /usr/share/arsenal/opener/opener.py'
 " >> /root/.bashrc
 
+source /root/.bashrc
+
 #Uniq duplicate alias(?) entries - UNTESTED
 #cat /root/.bashrc | nl|sort -k 2|uniq -f 1|sort -n|cut -f 2 > /root/.bashrc2
