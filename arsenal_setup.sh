@@ -50,9 +50,9 @@ alias opener='python /usr/share/arsenal/opener/opener.py'
 
 source /root/.bashrc
 
-cd /usr/bin
-ln -s /usr/share/framework2/msfelfscan msfelfscan
-ln -s /usr/share/framework2/msfpescan msfpescan
+
+/usr/bin/ln -s /usr/share/framework2/msfelfscan msfelfscan
+/usr/bin/ln -s /usr/share/framework2/msfpescan msfpescan
  
 #Uniq duplicate alias(?) entries - UNTESTED
 #cat /root/.bashrc | nl|sort -k 2|uniq -f 1|sort -n|cut -f 2 > /root/.bashrc2
