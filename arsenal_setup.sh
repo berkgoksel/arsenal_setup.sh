@@ -27,6 +27,7 @@ git clone https://github.com/JonathanSalwan/ROPgadget.git /usr/share/arsenal/ROP
 git clone https://github.com/hugsy/gef.git /usr/share/arsenal/GEF
 #git clone https://github.com/berkgoksel/guacamole /usr/share/arsenal/guacamole #Source code not yet disclosed
 git clone https://github.com/berkgoksel/opener.git /usr/share/arsenal/opener
+git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTool
 
 apt-get install -y python3-pip
 apt-get install -y gobuster
@@ -46,13 +47,13 @@ alias pattern_create='/usr/share/metasploit-framework/tools/exploit/pattern_crea
 alias ropgadget='python /usr/share/arsenal/ROPgadget/ROPgadget.py'
 alias bustit='gobuster -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt -u '
 alias opener='python /usr/share/arsenal/opener/opener.py'
+alias msfelfscan='python /usr/share/framework2/msfelfscan'
+alias msfpescan='python /usr/share/framework2/msfpescan'
+
 " >> /root/.bashrc
 
 source /root/.bashrc
 
-
-/usr/bin/ln -s /usr/share/framework2/msfelfscan msfelfscan
-/usr/bin/ln -s /usr/share/framework2/msfpescan msfpescan
  
 #Uniq duplicate alias(?) entries - UNTESTED
 #cat /root/.bashrc | nl|sort -k 2|uniq -f 1|sort -n|cut -f 2 > /root/.bashrc2
