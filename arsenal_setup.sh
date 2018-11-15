@@ -28,6 +28,7 @@ git clone https://github.com/hugsy/gef.git /usr/share/arsenal/GEF
 #git clone https://github.com/berkgoksel/guacamole /usr/share/arsenal/guacamole #Source code not yet disclosed
 git clone https://github.com/berkgoksel/opener.git /usr/share/arsenal/opener
 git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTool
+git clone https://github.com/Nekmo/dirhunt.git /usr/share/arsenal/dirhunt
 
 apt-get install -y python3-pip
 apt-get install -y gobuster
