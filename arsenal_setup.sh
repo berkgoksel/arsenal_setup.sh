@@ -68,7 +68,7 @@ read -r -p "Want to use GEF? [y/N]" response4
 case "$response4" in
     [yY][eE][sS]|[yY])
 
-	echo 'source /usr/share/arsenal/GEF/scripts' >> ~/.gdbinit
+	echo 'source /usr/share/arsenal/GEF/gef.py' >> ~/.gdbinit
 	esac
 
 
