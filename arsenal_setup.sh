@@ -34,6 +34,7 @@ git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
 apt-get install -y python3-pip
 apt-get install -y gobuster
 apt-get install -y python-pip
+apt-get install -y nasm build-essential
 
 
 pip3 install netaddr
