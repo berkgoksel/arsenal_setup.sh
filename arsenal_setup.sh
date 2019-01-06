@@ -35,6 +35,8 @@ apt-get install -y python3-pip
 apt-get install -y gobuster
 apt-get install -y python-pip
 apt-get install -y nasm build-essential
+apt-get install -y ltrace
+apt-get install -y strace
 
 
 pip3 install netaddr
