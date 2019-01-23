@@ -44,6 +44,7 @@ pip install capstone
 pip install pwntools
 pip install ropper
 pip install unicorn
+pip install frida-tools
 
 echo "
 alias elayv='python3 /usr/share/arsenal/elayv/elayv.py'
