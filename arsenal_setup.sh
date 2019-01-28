@@ -46,6 +46,15 @@ pip install ropper
 pip install unicorn
 pip install frida-tools
 
+#For GEF:
+pip3 install ropper
+pip3 install capstone
+pip3 install unicorn
+pip3 install keystone-engine
+
+#Lets set the disassembly flavor to Intel.
+echo "set disassembly-flavor intel" >> ~/.gdbinit
+
 echo "
 alias elayv='python3 /usr/share/arsenal/elayv/elayv.py'
 alias guacamole='/usr/share/arsenal/guacamole/guacamole.sh'
