@@ -132,3 +132,18 @@ case "$response3" in
 esac
 
 
+
+read -r -p "Will you be using Golang? [y/N] " response
+case "$response" in
+    [yY][eE][sS]|[yY]) 
+	wget https://dl.google.com/go/go1.12.2.linux-amd64.tar.gz
+	tar -xvf go1.12.2.linux-amd64.tar.gz
+	sudo mv go /usr/local
+	echo export GOROOT=/usr/local/go >> /root/.bashrc
+	echo export GOPATH=$HOME/go_projects/proj1 >> /root/.bashrc
+	echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> /root/.bashrc
+	read -n 1 -s -r -p "Press any key to continue\n"
+        ;;
+    *)
+        ;;
+esac
