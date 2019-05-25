@@ -141,6 +141,7 @@ case "$response" in
 	sudo mv go /usr/local
 	echo export GOROOT=/usr/local/go >> /root/.bashrc
 	echo export GOPATH=$HOME/go_projects/proj1 >> /root/.bashrc
+	echo export GOBIN=/usr/local/go/bin >> /root/.bashrc
 	echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> /root/.bashrc
 	read -n 1 -s -r -p "Press any key to continue\n"
         ;;
