@@ -140,6 +140,8 @@ case "$response" in
 	tar -xvf go1.12.2.linux-amd64.tar.gz
 	sudo mv go /usr/local
 	echo export GOROOT=/usr/local/go >> /root/.bashrc
+	mkdir /root/go_projects/
+	mkdir /root/go_projects/proj1
 	echo export GOPATH=$HOME/go_projects/proj1 >> /root/.bashrc
 	echo export GOBIN=/usr/local/go/bin >> /root/.bashrc
 	echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> /root/.bashrc
