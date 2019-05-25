@@ -143,6 +143,7 @@ case "$response" in
 	echo export GOPATH=$HOME/go_projects/proj1 >> /root/.bashrc
 	echo export GOBIN=/usr/local/go/bin >> /root/.bashrc
 	echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> /root/.bashrc
+	echo export PATH=$PATH:/usr/local/go/bin >> /root/.bashrc
 	read -n 1 -s -r -p "Press any key to continue\n"
         ;;
     *)
