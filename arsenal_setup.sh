@@ -85,6 +85,7 @@ case "$response4" in
 	esac
 
 
+
 read -r -p "Do you want to install IDA Freeware? [y/N]" response3
 case "$response3" in
     [yY][eE][sS]|[yY])
@@ -146,6 +147,24 @@ case "$response" in
 	echo export GOBIN=/usr/local/go/bin >> /root/.bashrc
 	echo export PATH=$GOPATH/bin:$GOROOT/bin:$PATH >> /root/.bashrc
 	echo export PATH=$PATH:/usr/local/go/bin >> /root/.bashrc
+	read -n 1 -s -r -p "Press any key to continue\n"
+        ;;
+    *)
+        ;;
+esac
+
+
+read -r -p "Will you be using SASM? [y/N] " response
+case "$response" in
+    [yY][eE][sS]|[yY]) 
+	sudo apt-get update
+	sudo apt-get -f install
+	sudo apt-get install nasm
+	#sudo apt-get install gcc-multilib
+	wget http://download.opensuse.org/repositories/home:/Dman95/Debian_9.0/amd64/sasm_3.10.1_amd64.deb
+	sudo dpkg -i asm_3.6.0_amd64.deb
+	sudo apt-get install -f
+	rm -rf asm_3.6.0_amd64.deb
 	read -n 1 -s -r -p "Press any key to continue\n"
         ;;
     *)
