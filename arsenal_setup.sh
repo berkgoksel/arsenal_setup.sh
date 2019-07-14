@@ -170,3 +170,10 @@ case "$response" in
     *)
         ;;
 esac
+
+
+#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#git clone https://github.com/powerline/fonts.git /use/share/arsenal/
+#bash /use/share/arsenal/fonts/install.sh
+#chsh -s $(which zsh)
+
