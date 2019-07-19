@@ -177,3 +177,16 @@ esac
 #bash /use/share/arsenal/fonts/install.sh
 #chsh -s $(which zsh)
 
+read -r -p "Will you be mounting VHD files on remote systems? :D [y/N] " response
+case "$response" in
+    [yY][eE][sS]|[yY]) 
+    	apt-get install -y libguestfs-tools
+	sudo apt-get -y install cifs-utils
+	
+	read -n 1 -s -r -p "Press any key to continue\n"
+        ;;
+    *)
+        ;;
+esac
+
+
