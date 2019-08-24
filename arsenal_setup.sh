@@ -56,6 +56,9 @@ pip3 install keystone-engine
 echo "set disassembly-flavor intel" >> ~/.gdbinit
 
 mkdir /usr/share/arsenal/misc
+chmod +x link32.sh
+mv link32.sh /usr/share/arsenal/misc/
+
 
 
 echo "
@@ -68,7 +71,7 @@ alias bustit='gobuster dir -w /usr/share/dirbuster/wordlists/directory-list-2.3-
 alias opener='python /usr/share/arsenal/opener/opener.py'
 alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
-alias link='/usr/share/arsenal/misc/link.sh'
+alias link32='/usr/share/arsenal/misc/link32.sh'
 
 " >> /root/.bashrc
 
