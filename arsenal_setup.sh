@@ -55,6 +55,9 @@ pip3 install keystone-engine
 #Lets set the disassembly flavor to Intel.
 echo "set disassembly-flavor intel" >> ~/.gdbinit
 
+mkdir /usr/share/arsenal/misc
+
+
 echo "
 alias elayv='python3 /usr/share/arsenal/elayv/elayv.py'
 alias guacamole='/usr/share/arsenal/guacamole/guacamole.sh'
@@ -65,6 +68,7 @@ alias bustit='gobuster dir -w /usr/share/dirbuster/wordlists/directory-list-2.3-
 alias opener='python /usr/share/arsenal/opener/opener.py'
 alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
+alias link='/usr/share/arsenal/misc/link.sh'
 
 " >> /root/.bashrc
 
