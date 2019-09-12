@@ -57,7 +57,9 @@ echo "set disassembly-flavor intel" >> ~/.gdbinit
 
 mkdir /usr/share/arsenal/misc
 chmod +x link32.sh
+chmod +x bin2shellcode.sh
 mv link32.sh /usr/share/arsenal/misc/
+mv bin2shellcode.sh /usr/share/arsenal/misc
 
 
 
@@ -72,6 +74,7 @@ alias opener='python /usr/share/arsenal/opener/opener.py'
 alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
 alias link32='/usr/share/arsenal/misc/link32.sh'
+alias bin2shellcode='/usr/share/arsenal/misc/bin2shellcode.sh'
 
 " >> /root/.bashrc
 
