@@ -30,7 +30,8 @@ git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTo
 git clone https://github.com/Nekmo/dirhunt.git /usr/share/arsenal/dirhunt
 git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
 
-
+apt-get install -y python2.7
+apt-get install -y python-pip
 apt-get install -y python3-pip
 apt-get install -y gobuster
 apt-get install -y python-pip
@@ -182,11 +183,6 @@ case "$response" in
 esac
 
 
-#sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#git clone https://github.com/powerline/fonts.git /use/share/arsenal/
-#bash /use/share/arsenal/fonts/install.sh
-#chsh -s $(which zsh)
-
 read -r -p "Will you be mounting VHD files on remote systems? :D [y/N] " response
 case "$response" in
     [yY][eE][sS]|[yY]) 
@@ -199,4 +195,18 @@ case "$response" in
         ;;
 esac
 
+#bu kısım hep en son da kalsın çünkü zsh shell'e giriyor terminal altaki komutu yapmıyor girdiği için.
 
+read -r -p "Do you want to install Oh my Zsh and Powerline Fonts ?" response
+echo "Please edit after the installition ~/.zshrc file theme line edit theme name agnoster and terminal settings font setting select powerline font"
+case "$response" in
+    [yY][eE][sS]|[yY])
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	git clone https://github.com/powerline/fonts.git /use/share/arsenal/
+	bash /use/share/arsenal/fonts/install.sh
+	chsh -s $(which zsh)
+	read -n 1 -s -r -p "Press any key to continue\n"
+        ;;
+    *)
+        ;;
+esac
