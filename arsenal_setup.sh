@@ -30,13 +30,13 @@ git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTo
 git clone https://github.com/Nekmo/dirhunt.git /usr/share/arsenal/dirhunt
 git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
 
-
-apt-get install -y python3-pip
-apt-get install -y gobuster
-apt-get install -y python-pip
-apt-get install -y nasm build-essential
-apt-get install -y ltrace
-apt-get install -y strace
+apt install -y gdb
+apt install -y python3-pip
+apt install -y gobuster
+apt install -y python-pip
+#apt install -y nasm build-essential
+apt install -y ltrace
+apt install -y strace
 
 
 pip3 install netaddr
