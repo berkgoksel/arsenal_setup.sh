@@ -121,8 +121,7 @@ case "$response3" in
         	echo "Downloading dependencies."
         	;;
     	*)
-        	echo "Exiting..."
-        	exit 1;
+        	echo "Skipping"
         	;;
 	esac
 	fi
@@ -138,7 +137,6 @@ case "$response3" in
         ;;
     *)
 	echo "Alright! You can install it later manually."
-	exit 1;
         ;;
 esac
 
@@ -174,7 +172,7 @@ case "$response" in
 	wget http://download.opensuse.org/repositories/home:/Dman95/Debian_9.0/amd64/sasm_3.10.1_amd64.deb
 	sudo dpkg -i asm_3.6.0_amd64.deb
 	sudo apt-get install -f
-	rm -rf asm_3.6.0_amd64.deb
+	rm -rf sasm_3.6.0_amd64.deb
 	read -n 1 -s -r -p "Press any key to continue\n"
         ;;
     *)
