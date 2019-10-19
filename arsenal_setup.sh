@@ -75,6 +75,8 @@ alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
 alias link32='/usr/share/arsenal/misc/link32.sh'
 alias bin2shellcode='/usr/share/arsenal/misc/bin2shellcode.sh'
+alias rot13encode='python3 /usr/share/arsenal/rot13.py -e'
+alias rot13decode='python3 /usr/share/arsenal/rot13.py -d'
 
 " >> /root/.bashrc
 
