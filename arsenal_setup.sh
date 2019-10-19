@@ -52,6 +52,7 @@ pip3 install capstone
 pip3 install unicorn
 pip3 install keystone-engine
 
+
 #Lets set the disassembly flavor to Intel.
 echo "set disassembly-flavor intel" >> ~/.gdbinit
 
@@ -61,7 +62,10 @@ chmod +x bin2shellcode.sh
 mv link32.sh /usr/share/arsenal/misc/
 mv bin2shellcode.sh /usr/share/arsenal/misc
 mv rot13.py /usr/share/arsenal/misc/
+mv morse.py /usr/share/arsenal/misc/
+mv binaryencoder.py /usr/share/arsenal/misc/
 
+pip3 install morse-talk 
 
 
 
@@ -79,6 +83,11 @@ alias link32='/usr/share/arsenal/misc/link32.sh'
 alias bin2shellcode='/usr/share/arsenal/misc/bin2shellcode.sh'
 alias rot13encode='python3 /usr/share/arsenal/misc/rot13.py -e'
 alias rot13decode='python3 /usr/share/arsenal/misc/rot13.py -d'
+alias morseencode='python3 /usr/share/arsenal/misc/morse.py -e'
+alias morsedecode='python3 /usr/share/arsenal/misc/morse.py -d'
+alias binaryencode='python3 /usr/share/arsenal/misc/binaryencoder.py -e'
+alias binarydecode='python3 /usr/share/arsenal/misc/binaryencoder.py -d'
+
 
 " >> /root/.bashrc
 
