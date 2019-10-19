@@ -60,6 +60,8 @@ chmod +x link32.sh
 chmod +x bin2shellcode.sh
 mv link32.sh /usr/share/arsenal/misc/
 mv bin2shellcode.sh /usr/share/arsenal/misc
+mv rot13.py /usr/share/arsenal/misc/
+
 
 
 
@@ -75,8 +77,8 @@ alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
 alias link32='/usr/share/arsenal/misc/link32.sh'
 alias bin2shellcode='/usr/share/arsenal/misc/bin2shellcode.sh'
-alias rot13encode='python3 /usr/share/arsenal/rot13.py -e'
-alias rot13decode='python3 /usr/share/arsenal/rot13.py -d'
+alias rot13encode='python3 /usr/share/arsenal/misc/rot13.py -e'
+alias rot13decode='python3 /usr/share/arsenal/misc/rot13.py -d'
 
 " >> /root/.bashrc
 
