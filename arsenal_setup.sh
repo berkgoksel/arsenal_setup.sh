@@ -116,27 +116,27 @@ case "$response3" in
 
 	#Get IDA Freeware
 	wget https://out7.hex-rays.com/files/idafree70_linux.run -P /usr/share/arsenal/
-	sha1_sum=$(sha1sum /usr/share/arsenal/idafree70_linux.run | cut -d " " -f 1)
-	idafree70sha1=85984147fea9625fa149484eae2ef6d0c2739856
+	#sha1_sum=$(sha1sum /usr/share/arsenal/idafree70_linux.run | cut -d " " -f 1)
+	#idafree70sha1=85984147fea9625fa149484eae2ef6d0c2739856
 
-	if [ "$sha1_sum" != "$idafree70sha1" ]
+	#if [ "$sha1_sum" != "$idafree70sha1" ]
 
-	then
-        	echo "WARNING: Checksums don't match!\n"
-        	echo "What you downloaded:"
-        	echo $sha1_sum
-        	echo "What it should be:"
-        	echo $idafree70sha1"\n"
-        	read -r -p "Do you want to continue? [y/N]" response2
-        	case "$response2" in
-        	[yY][eE][sS]|[yY])
-        	echo "Downloading dependencies."
-        	;;
-    	*)
-        	echo "Skipping"
-        	;;
-	esac
-	fi
+	#then
+        #	echo "WARNING: Checksums don't match!\n"
+        #	echo "What you downloaded:"
+        #	echo $sha1_sum
+        #	echo "What it should be:"
+        #	echo $idafree70sha1"\n"
+        #	read -r -p "Do you want to continue? [y/N]" response2
+        #	case "$response2" in
+        #	[yY][eE][sS]|[yY])
+        #	echo "Downloading dependencies."
+        #	;;
+    	#*)
+        #	echo "Skipping"
+        #	;;
+	#esac
+	#fi
 
 
 
