@@ -55,8 +55,10 @@ echo "set disassembly-flavor intel" >> ~/.gdbinit
 
 mkdir /usr/share/arsenal/misc
 chmod +x link32.sh
+chmod +x link64.sh
 chmod +x bin2shellcode.sh
 mv link32.sh /usr/share/arsenal/misc/
+mv link64.sh /usr/share/arsenal/misc/
 mv bin2shellcode.sh /usr/share/arsenal/misc
 mv rot13.py /usr/share/arsenal/misc/
 mv morse.py /usr/share/arsenal/misc/
