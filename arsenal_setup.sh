@@ -33,18 +33,15 @@ git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
 apt install -y gdb
 apt install -y python3-pip
 apt install -y gobuster
-apt install -y python-pip
 #apt install -y nasm build-essential
 apt install -y ltrace
 apt install -y strace
 
 
 pip3 install netaddr
-pip install capstone
-pip install pwntools
-pip install ropper
-pip install unicorn
-pip install frida-tools
+pip3 install pwntools
+pip3 install ropper
+pip3 install frida-tools
 
 #For GEF:
 pip3 install ropper
