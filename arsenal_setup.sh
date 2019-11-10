@@ -36,7 +36,10 @@ apt install -y gobuster
 #apt install -y nasm build-essential
 apt install -y ltrace
 apt install -y strace
+apt install python2
 
+pip install pwntools
+pip install z3-solver
 
 pip3 install netaddr
 pip3 install pwntools
@@ -73,11 +76,11 @@ alias elayv='python3 /usr/share/arsenal/elayv/elayv.py'
 alias guacamole='/usr/share/arsenal/guacamole/guacamole.sh'
 alias pattern_offset='/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb'
 alias pattern_create='/usr/share/metasploit-framework/tools/exploit/pattern_create.rb'
-alias ropgadget='python3 /usr/share/arsenal/ROPgadget/ROPgadget.py'
+alias ropgadget='python /usr/share/arsenal/ROPgadget/ROPgadget.py'
 alias bustit='gobuster dir -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt -u '
 alias opener='python /usr/share/arsenal/opener/opener.py'
-alias msfelfscan='python3 /usr/share/framework2/msfelfscan'
-alias msfpescan='python3 /usr/share/framework2/msfpescan'
+alias msfelfscan='python /usr/share/framework2/msfelfscan'
+alias msfpescan='python /usr/share/framework2/msfpescan'
 alias link32='/usr/share/arsenal/misc/link32.sh'
 alias bin2shellcode='/usr/share/arsenal/misc/bin2shellcode.sh'
 alias rot13encode='python3 /usr/share/arsenal/misc/rot13.py -e'
