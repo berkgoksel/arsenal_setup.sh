@@ -37,6 +37,7 @@ apt install -y gobuster
 apt install -y ltrace
 apt install -y strace
 apt install python2
+apt install python-pip
 
 pip install pwntools
 pip install z3-solver
