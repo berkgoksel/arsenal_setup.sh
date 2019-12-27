@@ -36,14 +36,13 @@ apt install -y gobuster
 #apt install -y nasm build-essential
 apt install -y ltrace
 apt install -y strace
-apt install python2
-apt install python-pip
+apt install -y python2
+apt install -y python-pip
 
 pip install pwntools
 pip install z3-solver
 
 pip3 install netaddr
-pip3 install pwntools
 pip3 install ropper
 pip3 install frida-tools
 
@@ -106,7 +105,6 @@ wget http://www.trapkit.de/tools/checkrelro.sh -P /usr/share/arsenal/
 read -r -p "Want to use GEF? [y/N]" response4
 case "$response4" in
     [yY][eE][sS]|[yY])
-
 	echo 'source /usr/share/arsenal/GEF/gef.py' >> ~/.gdbinit
 	esac
 
