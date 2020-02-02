@@ -39,7 +39,7 @@ gem install seccomp-tools
 
 apt install -y gdb
 apt install -y python3-pip
-apt install -y gobuster
+apt install -y gobuster exiftool
 #apt install -y nasm build-essential
 apt install -y ltrace strace
 apt install -y python2 python-pip
