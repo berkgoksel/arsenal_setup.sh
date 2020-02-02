@@ -24,20 +24,25 @@ git clone https://github.com/berkgoksel/Elayv.git /usr/share/arsenal/elayv
 git clone https://github.com/longld/peda.git /usr/share/arsenal/PEDA
 git clone https://github.com/JonathanSalwan/ROPgadget.git /usr/share/arsenal/ROPgadget
 git clone https://github.com/hugsy/gef.git /usr/share/arsenal/GEF
-#git clone https://github.com/berkgoksel/guacamole /usr/share/arsenal/guacamole #Source code not yet disclosed
+#git clone https://github.com/berkgoksel/guacamole /usr/share/arsenal/guacamole
 git clone https://github.com/berkgoksel/opener.git /usr/share/arsenal/opener
 git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTool
 git clone https://github.com/Nekmo/dirhunt.git /usr/share/arsenal/dirhunt
 git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
 
+apt update
+apt-get install -y gcc ruby-dev
+apt-get install -y libgmp-dev libmpfr-dev libmpc-dev
+pip3 install -r /usr/share/arsenal/RsaCtfTool/requirements.txt
+
+gem install seccomp-tools
+
 apt install -y gdb
 apt install -y python3-pip
 apt install -y gobuster
 #apt install -y nasm build-essential
-apt install -y ltrace
-apt install -y strace
-apt install -y python2
-apt install -y python-pip
+apt install -y ltrace strace
+apt install -y python2 python-pip
 
 pip install pwntools
 pip install z3-solver
@@ -47,11 +52,7 @@ pip3 install ropper
 pip3 install frida-tools
 
 #For GEF:
-pip3 install ropper
-pip3 install capstone
-pip3 install unicorn
-pip3 install keystone-engine
-
+pip3 install ropper capstone unicorn keystone-engine
 
 #Lets set the disassembly flavor to Intel.
 echo "set disassembly-flavor intel" >> ~/.gdbinit
