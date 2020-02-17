@@ -33,7 +33,7 @@ def opener():
                 for opener_line in opener_a:
                     if x == int(limit):
 
-                        p2 = raw_input("Enter any key to continue, n to exit:  ")
+                        p2 = input("Enter any key to continue, n to exit:  ")
                         if p2 == str('n'):
                             break
                         else:
