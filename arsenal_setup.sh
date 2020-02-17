@@ -25,7 +25,6 @@ git clone https://github.com/longld/peda.git /usr/share/arsenal/PEDA
 git clone https://github.com/JonathanSalwan/ROPgadget.git /usr/share/arsenal/ROPgadget
 git clone https://github.com/hugsy/gef.git /usr/share/arsenal/GEF
 #git clone https://github.com/berkgoksel/guacamole /usr/share/arsenal/guacamole
-git clone https://github.com/berkgoksel/opener.git /usr/share/arsenal/opener
 git clone https://github.com/Ganapati/RsaCtfTool.git /usr/share/arsenal/RsaCtfTool
 git clone https://github.com/Nekmo/dirhunt.git /usr/share/arsenal/dirhunt
 git clone https://github.com/pwndbg/pwndbg /usr/share/arsenal/pwndbg
@@ -67,6 +66,8 @@ mv bin2shellcode.sh /usr/share/arsenal/misc
 mv rot13.py /usr/share/arsenal/misc/
 mv morse.py /usr/share/arsenal/misc/
 mv binaryencoder.py /usr/share/arsenal/misc/
+mv visitpages.py /usr/share/arsenal/misc/
+
 
 pip3 install morse-talk 
 
@@ -79,7 +80,7 @@ alias pattern_offset='/usr/share/metasploit-framework/tools/exploit/pattern_offs
 alias pattern_create='/usr/share/metasploit-framework/tools/exploit/pattern_create.rb'
 alias ropgadget='python /usr/share/arsenal/ROPgadget/ROPgadget.py'
 alias bustit='gobuster dir -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt -u '
-alias opener='python /usr/share/arsenal/opener/opener.py'
+alias visitpages='python /usr/share/arsenal/misc/visitpages.py'
 alias msfelfscan='python /usr/share/framework2/msfelfscan'
 alias msfpescan='python /usr/share/framework2/msfpescan'
 alias link32='/usr/share/arsenal/misc/link32.sh'
