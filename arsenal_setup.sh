@@ -48,7 +48,7 @@ pip install z3-solver
 
 pip3 install netaddr
 pip3 install ropper
-pip3 install frida-tools
+#pip3 install frida-tools
 
 #For GEF:
 pip3 install ropper capstone unicorn keystone-engine
@@ -201,7 +201,7 @@ esac
 #bash /use/share/arsenal/fonts/install.sh
 #chsh -s $(which zsh)
 
-read -r -p "Will you be mounting VHD files on remote systems? :D [y/N] " response
+read -r -p "Will you be mounting VHD files on remote systems? [y/N] " response
 case "$response" in
     [yY][eE][sS]|[yY]) 
     	apt-get install -y libguestfs-tools
