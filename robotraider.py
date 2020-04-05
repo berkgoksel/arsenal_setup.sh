@@ -9,7 +9,7 @@ import time
 
 def host_query():
 
-    domain1 = str(raw_input("Please enter Domain name (format: domain.com:\n"))
+    domain1 = str(raw_input("Enter domain name (format: domain.com:\n"))
     try:
         IP_RR = socket.gethostbyname(domain1)
         print(str(domain1) + "'s IP adress is " +str(IP_RR))
