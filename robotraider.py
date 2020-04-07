@@ -1,83 +1,62 @@
-import socket
-import urllib2
-import sys
 import os
+import requests
+import socket
+import sys
 import time
-#import subprocess
-
 
 
 def host_query():
-
-    domain1 = str(raw_input("Enter domain name (format: domain.com:\n"))
     try:
-        IP_RR = socket.gethostbyname(domain1)
-        print(str(domain1) + "'s IP adress is " +str(IP_RR))
-        return domain1
+        domain = input("Enter domain name (format: domain.com): ")
+        ip_address = socket.gethostbyname(domain)
+        print(f"{domain}'s IP address is: {ip_address}")
+
+        robots(domain)
+
     except:
         print("You may have typed a non-existent domain. If not, check your internet connection")
+        host_query()
 
 
-
-
-def la( domainName):
-
+def robots(domainName):
     try:
+        print(f"Searching for 'robots.txt' file on {domainName}")
+        user_agent = "Mozilla/5.0"
+        custom_headers = {"User-Agent": user_agent}
+        url = f"http://{domainName}/robots.txt"
+        request = requests.get(url, headers=custom_headers)
+        status_code = request.status_code
+        response = request.text
+        html = response.split("\n")
 
-        print("\nSearching for robots.txt file on " + str(domainName))
-        RR_user_agent = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
-        RR_headers = {'User-Agent': RR_user_agent}
-    # data = urllib.urlencode(values)
-        RR_url = "http://" + str(socket.gethostbyname(domainName)) + "/robots.txt"
-        RR_req = urllib2.Request(RR_url, None, RR_headers)
-        RR_response = urllib2.urlopen(RR_req)
-        RR_rcode = RR_response.getcode()
-        html = RR_response.read().split('\n')
-        #print html --debug
-
-        if RR_rcode == int(200):
-            print("Processing robots.txt file")
-            os.system('firefox --new-tab http://www.berkgoksel.com & ')
-            time.sleep(2)
+        if status_code == int(200):
+            print("Processing 'robots.txt'")
+            # os.system(f"firefox --new-tab {domainName} & ")
+            # time.sleep(2)
 
             x = 0
-            for RR_line in html:
+            for line in html:
                 if x == int(10):
-
-                    p2 = raw_input("Press (y) to continue...")
-                    if p2 == str('y'):
+                    user_input = input("Press (y) to continue...")
+                    if user_input == str("y"):
                         x = 0
                     else:
                         break
 
-                if str("Disallow") in RR_line:
-                    RR_dir = RR_line.split(': ')[1]
-                    RR_command = "firefox --new-tab " + domainName + RR_dir
-                    os.system(RR_command)
-                    #subprocess.call([RR_command], shell=True)
-                    time.sleep(0.5)
-                    x = x + 1
-                    #If no disallowed pages are found + print error.
+                if "Disallow" in line:
+                    directory = line.split(": ")[1]
+                    command = f"firefox --new-tab {domainName}{directory}"
+                    os.system(command)
 
-
-                        #os.system('firefox -new-tab' + domainName + '/' + RR_line)
-                        #time.sleep(0.5)
-
-               # else:
-                    #print "a"
-
-                #RR_File = open("temp_file", 'r')
-                #disallowed = RR_File.read().split('\n')
-                #print disallowed
-
-
+            print("Finished processing 'robots.txt'")
 
         else:
-            sys.exit("Unable to find robots.txt")
+            sys.exit("Unable to find 'robots.txt'")
 
-    except urllib2.URLError:
+    except:
         sys.exit("Check your internet connection")
+        host_query()
 
 
-#checks if could get robots.txt
-la(host_query())
+if __name__ == "__main__":
+    host_query()
