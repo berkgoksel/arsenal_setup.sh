@@ -1,3 +1,5 @@
+#!/bin/bash
+
 read -r -p "Is this a clean Kali installation? [y/N] " response
 case "$response" in
     [yY][eE][sS]|[yY]) 
@@ -212,5 +214,3 @@ case "$response" in
     *)
         ;;
 esac
-
-
