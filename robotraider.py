@@ -40,8 +40,10 @@ def robots(domainName):
             for line in html:
                 if x == int(10):
                     user_input = input("Press (y) to continue...")
+
                     if user_input == str("y"):
                         x = 0
+
                     else:
                         break
 
@@ -49,6 +51,9 @@ def robots(domainName):
                     directory = line.split(": ")[1]
                     command = f"firefox --new-tab {domainName}{directory}"
                     os.system(command)
+                
+                elif "Allow" in line:
+                    print(line)
 
             print("Finished processing 'robots.txt'")
 
