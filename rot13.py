@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import codecs
 import sys
 
@@ -11,5 +13,5 @@ if sys.argv[1] == "-d":
 
 
 print(string)
-#alias rot13encode='python3 /usr/share/arsenal/rot13.py -e'
-#alias rot13decode='python3 /usr/share/arsenal/rot13.py -d'
+# alias rot13encode='python3 /usr/share/arsenal/rot13.py -e'
+# alias rot13decode='python3 /usr/share/arsenal/rot13.py -d'
